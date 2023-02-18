@@ -1,0 +1,101 @@
+video {
+
+  object-fit: cover;
+
+  width: 100vw;
+
+  height: 100vh;
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: -1;
+
+}
+
+.App {
+
+    background-color: rgba(240, 148, 78, 0.5);
+
+}
+
+
+
+.container {
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.search {
+
+  width: 100%;
+
+        padding: 12px 24px;
+
+        background-color: transparent;
+
+        font-size: 14px;
+
+        line-height: 18px;
+
+        color: #fffff9;
+
+        background-color: transparent;
+
+        margin-left: 0px;
+
+        box-shadow: inset 0px 0px 0px 4px #ddd6e8;
+
+}
+
+ul {
+
+  list-style: none; 
+
+  padding: 0;
+
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+
+}
+
+li {
+
+  display: block;
+
+  padding: .4em .4em .4em .8em;
+
+  margin: .5em 0 .5em 2.5em;
+
+  background: #ddd6e8;
+
+}
+
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  min-width: 32%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
