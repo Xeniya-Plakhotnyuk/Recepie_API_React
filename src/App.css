@@ -1,3 +1,13 @@
+body{
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  /* background-image: url('back.PNG'); */
+  background-size: cover;
+  background-repeat: repeat;
+}
+
 video {
 
   object-fit: cover;
@@ -16,21 +26,34 @@ video {
 
 }
 
-.App {
 
-    background-color: rgba(240, 148, 78, 0.5);
 
+h1, h2{
+  font-family: 'Lato', sans-serif;
 }
 
-
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px;
+}
 
 .container {
-
   display: flex;
-
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+  flex-basis: 10%;
+  background: rgb(253,29,29);
+background: linear-gradient(0deg, rgba(253,29,29,1) 13%, rgba(252,176,69,1) 100%);
 
 }
+
+  
 
 .top{
   display: flex;
@@ -50,13 +73,17 @@ video {
 
         line-height: 18px;
 
-        color: #fffff9;
+        color: black;
 
         background-color: transparent;
 
         margin-left: 0px;
 
         box-shadow: inset 0px 0px 0px 4px #ddd6e8;
+
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        letter-spacing: .2rem;
 
 }
 
@@ -80,6 +107,13 @@ li {
 
   background: #ddd6e8;
 
+  font-family: 'Roboto', sans-serif;;
+
+}
+
+
+h3{
+  font-family: 'Roboto', sans-serif;
 }
 
 .button-32 {
@@ -87,7 +121,6 @@ li {
   border-radius: 12px;
   color: #000;
   cursor: pointer;
-  font-weight: bold;
   padding: 10px 15px;
   text-align: center;
   transition: 200ms;
@@ -98,4 +131,34 @@ li {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
+  font-family: 'Roboto', sans-serif;
+  }
+
+  a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  .footer {
+    font-family: 'Roboto';
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    }
+
+
+
+  .footer_disclaimer {
+    color: black;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+
+
+  img{
+    border-radius: 30px;
+  }
+

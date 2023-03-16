@@ -2,17 +2,21 @@
 function MyRecepieComponent({label, image, calories, ingredients, time, id, link}){
 
     return(
-        <div key={id}>
-        <div className="container">
-        <h2>{label}</h2>
-        </div>
+        <div key={id} className='container'>
+         
+
         <div className="tasty">
         <img src={image}/>
         </div>
+
+       <div className="card_inside">
+        <h2>{label}</h2>
+        </div>
+
         <div>
         <ul>
             {ingredients.map(item =>(
-                <li>{item}</li>
+                <li>⭐️ {item}</li>
             )
             )}
         </ul>
@@ -23,17 +27,12 @@ function MyRecepieComponent({label, image, calories, ingredients, time, id, link
         WATCH RECEPIE
       </a>
         </div>
-
-        </div>
+        
         <div>
         <h3>{calories.toFixed()} calories</h3>
         </div>
-
-        <div className="container">
-            <p>{time} MIN</p>
-        </div>
-
-        
+</div>
+              
         </div>
     )
 

@@ -36,31 +36,28 @@ function App() {
   return (
     <div className="App">
 
-  <div className="container">
-
-  <video autoPlay muted loop>
-
-   <source src="./food.mp4" type="video/mp4" />
-
-</video>
-
-  <h1>Find a Recipe</h1>
+  <div>
+<div className="top" >
+  <img src="./logo.PNG" alt="logo" width ='250px'/>
+</div>
+ 
+  {/* <h1 className="top">Find a Recipe</h1> */}
 
   </div>
 
 <div className="top">
-  <div className="container">
+  <div >
     <form onSubmit={finalWord}>
       <input className="search" placeholder="Search by Ingridient..." onChange={findRecepie} value={mySearch}></input>
     </form>
   </div>
 
-<div className="container">
+<div>
         <button ><img src=""  className="icon" /></button>
       </div>
 </div>      
 
-<div>
+<div className="main">
 {myRecepie.map((element, index) => (
   <MyRecepieComponent key={index}
   label = {element.recipe.label} 
@@ -75,6 +72,15 @@ function App() {
 </div>
   
 
+  <div className="footer">
+         
+          <p className="footer_disclaimer">
+            This website created for educational purposes only<br></br> by
+            Xeniya Plakhotnyuk
+          </p>
+        
+      </div>
+
   </div>
 
   );
@@ -82,9 +88,3 @@ function App() {
 
 export default App;
 
-// {
-      //   // headers: {
-      //   //  "Accept": "application/json",
-      //   //   "Accept-Language": "en",
-      //   // },
-      // }
