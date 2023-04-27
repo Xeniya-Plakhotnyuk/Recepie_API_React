@@ -1,42 +1,58 @@
+import React, { useState } from "react";
 
-function MyRecepieComponent({label, image, calories, ingredients, time, id, link}){
+function MyRecepieComponent({
+  label,
+  image,
+  calories,
+  ingredients,
+  time,
+  id,
+  link,
+}) {
+  const [visible, setVisible] = useState(false);
+  const [showButton, setShowButton] = useState(true);
 
-    return(
-        <div key={id} className='container'>
-         
+  const toggleVisibility = () => {
+    setVisible(!visible);
+    setShowButton(false);
+  };
 
-        <div className="tasty">
-        <img src={image}/>
-        </div>
+  return (
+    <div key={id} className="container">
+      <div className="tasty">
+        <img className="food_pic" src={image} />
+      </div>
 
-       <div className="card_inside">
+      <div className="card_inside">
         <h2>{label}</h2>
-        </div>
+      </div>
 
-        <div>
-        <ul>
-            {ingredients.map(item =>(
-                <li>⭐️ {item}</li>
-            )
-            )}
-        </ul>
+      <div>
+        {showButton && (
+          <button className="button_show" onClick={toggleVisibility}>
+            SHOW INGRIDIENTS
+          </button>
+        )}
+        {visible && (
+          <ul>
+            {ingredients.map((item) => (
+              <li>⭐️ {item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
 
-        
-        <div className="button-32">
+      <div className="button-32">
         <a href={link} target="_blank" rel="noreferrer">
-        WATCH RECEPIE
-      </a>
-        </div>
-        
-        <div>
+          WATCH RECEPIE
+        </a>
+      </div>
+
+      <div>
         <h3>{calories.toFixed()} calories</h3>
-        </div>
-</div>
-              
-        </div>
-    )
-
-
+      </div>
+    </div>
+  );
 }
 
 export default MyRecepieComponent;
