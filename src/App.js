@@ -15,7 +15,6 @@ function App() {
         `https://api.edamam.com/api/recipes/v2?type=public&q=${myWord}&app_id=92e6f20f&app_key=bb33901803385e800d37e54e1b7304ca`
       );
       const data = await response.json();
-      console.log(data.hits);
       setMyRecepie(data.hits);
     };
     getRecepie();
@@ -31,8 +30,33 @@ function App() {
     setMyWord(mySearch);
   };
 
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="App">
+      {showButton && (
+        <button onClick={handleClick} className="go-top-button">
+          Go to top
+        </button>
+      )}
+
       <div className="header">
         <div className="top">
           <img src="./logo.PNG" alt="logo" width="250px" />
@@ -54,6 +78,7 @@ function App() {
                 <img
                   src="https://img.icons8.com/fluency/48/000000/fry.png"
                   className="icon"
+                  alt="search"
                 />
               </button>
             </div>
