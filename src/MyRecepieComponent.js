@@ -35,8 +35,8 @@ function MyRecepieComponent({
         )}
         {visible && (
           <ul>
-            {ingredients.map((item) => (
-              <li>⭐️ {item}</li>
+            {ingredients.map((item, index) => (
+              <li key={index}>⭐️ {item}</li>
             ))}
           </ul>
         )}

@@ -73,7 +73,7 @@ function App() {
               ></input>
             </form>
             <div>
-              <button>
+              <button onClick={finalWord}>
                 <img
                   src="https://img.icons8.com/fluency/48/000000/fry.png"
                   className="icon"

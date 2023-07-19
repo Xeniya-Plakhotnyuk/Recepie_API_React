@@ -9,7 +9,7 @@ function BackToTop() {
   }, []);
 
   const handleScroll = () => {
-    if (window.pageYOffset > 300) {
+    if (window > 300) {
       setShowButton(true);
     } else {
       setShowButton(false);
