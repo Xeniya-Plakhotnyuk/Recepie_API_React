@@ -21,7 +21,6 @@ function App() {
   }, [myWord]);
 
   const findRecepie = (e) => {
-    console.log(e.target.value);
     setMySearch(e.target.value);
   };
 
